@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", monospace;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  color: #00ff88;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.game-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.game-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-shadow: 0 0 10px #00ff88;
+  background: linear-gradient(45deg, #00ff88, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.game-stats {
+  display: flex;
+  gap: 30px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88;
+}
+
+.game-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+}
+
+#gameCanvas {
+  border: 3px solid #00ff88;
+  border-radius: 10px;
+  background: #000;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+  max-width: 100%;
+  height: auto;
+}
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.overlay-content {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.overlay-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00ff88;
+  text-shadow: 0 0 10px #00ff88;
+}
+
+.overlay-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.game-button {
+  background: linear-gradient(45deg, #00ff88, #00ffff);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 10px;
+}
+
+.game-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+}
+
+.game-button:active {
+  transform: translateY(0);
+}
+
+.game-controls {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.control-group h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #00ff88;
+  text-align: center;
+}
+
+.control-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.key {
+  background: #333;
+  border: 1px solid #00ff88;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #00ff88;
+  min-width: 30px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-container {
+    padding: 10px;
+  }
+
+  .game-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .game-title {
+    font-size: 2rem;
+  }
+
+  .game-stats {
+    gap: 20px;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  #gameCanvas {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .overlay-content {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .overlay-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .game-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin: 5px;
+  }
+}
+
+/* Animation for game elements */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
+  }
+}
+
+.game-header,
+.game-controls {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Hide overlay when game is running */
+.game-overlay.hidden {
+  display: none;
+}

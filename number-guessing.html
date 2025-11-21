@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="number-guessing-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="game-container">
+      <header class="game-header">
+        <h1 class="game-title">Number Guessing Game</h1>
+        <div class="game-stats">
+          <div class="stat">
+            <span class="stat-label">Score:</span>
+            <span id="score" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Lives:</span>
+            <span id="lives" class="stat-value">5</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Correct:</span>
+            <span id="correct" class="stat-value">0</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="game-area">
+        <div class="number-display">
+          <div class="number-circle">
+            <span id="currentNumber">?</span>
+          </div>
+          <div class="lives-display">
+            <span id="livesHearts">❤️❤️❤️❤️❤️</span>
+          </div>
+        </div>
+
+        <div class="input-section">
+          <h2>Guess the number between 1 and 10</h2>
+          <div class="input-group">
+            <input
+              type="number"
+              id="guessInput"
+              min="1"
+              max="10"
+              placeholder="Enter your guess"
+            />
+            <button id="submitGuess" class="submit-btn">Submit Guess</button>
+          </div>
+          <div class="hint" id="hint">Start guessing!</div>
+        </div>
+
+        <div class="game-overlay" id="gameOverlay">
+          <div class="overlay-content">
+            <h2 id="overlayTitle">Welcome to Number Guessing!</h2>
+            <p id="overlayMessage">Guess 5 numbers correctly to win!</p>
+            <button id="startButton" class="game-button">Start Game</button>
+            <button
+              id="restartButton"
+              class="game-button"
+              style="display: none"
+            >
+              Play Again
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-controls">
+        <div class="control-group">
+          <h3>How to Play</h3>
+          <div class="control-item">
+            <span class="key">1-10</span> Enter a number between 1 and 10
+          </div>
+          <div class="control-item">
+            <span class="key">5</span> Lives to guess correctly
+          </div>
+          <div class="control-item">
+            <span class="key">5</span> Correct guesses to win
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="number-guessing.js"></script>
+  </body>
+</html>

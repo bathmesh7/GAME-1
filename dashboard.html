@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming Platform - Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1 class="dashboard-title">Gaming Platform</h1>
+        <div class="user-info">
+          <span id="username">Welcome, Player!</span>
+          <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <div class="games-grid">
+        <!-- Game 1: Chess -->
+        <div class="game-card" data-game="chess">
+          <div class="game-image">
+            <div class="game-placeholder chess-placeholder">
+              <div class="chess-board">
+                <div class="chess-piece king">♔</div>
+                <div class="chess-piece queen">♕</div>
+                <div class="chess-piece rook">♖</div>
+              </div>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3 class="game-title">Chess</h3>
+            <p class="game-description">
+              Classic chess with proper rules. Strategic gameplay with move
+              highlighting.
+            </p>
+            <div class="game-stats">
+              <span class="stat">Players: 2</span>
+              <span class="stat">Difficulty: Hard</span>
+            </div>
+            <button class="play-btn">Play Now</button>
+          </div>
+        </div>
+
+        <!-- Game 2: Number Guessing -->
+        <div class="game-card" data-game="number-guessing">
+          <div class="game-image">
+            <div class="game-placeholder number-placeholder">
+              <div class="number-display">
+                <span class="number">?</span>
+                <div class="lives">❤️❤️❤️❤️❤️</div>
+              </div>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3 class="game-title">Number Guessing</h3>
+            <p class="game-description">
+              Guess the number between 1-10. You have 5 lives. Get 5 correct to
+              win!
+            </p>
+            <div class="game-stats">
+              <span class="stat">Lives: 5</span>
+              <span class="stat">Range: 1-10</span>
+            </div>
+            <button class="play-btn">Play Now</button>
+          </div>
+        </div>
+
+        <!-- Game 3: Typing Game -->
+        <div class="game-card" data-game="typing-game">
+          <div class="game-image">
+            <div class="game-placeholder typing-placeholder">
+              <div class="fighter-jet">✈️</div>
+              <div class="astronaut">👨‍🚀</div>
+              <div class="word-bubble">WORD</div>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3 class="game-title">Fast Typing Fighter</h3>
+            <p class="game-description">
+              Type words to shoot down astronauts. Fast-paced typing action!
+            </p>
+            <div class="game-stats">
+              <span class="stat">Speed: Fast</span>
+              <span class="stat">Skills: Typing</span>
+            </div>
+            <button class="play-btn">Play Now</button>
+          </div>
+        </div>
+
+        <!-- Game 4: Memory Card -->
+        <div class="game-card" data-game="memory-card-2player">
+          <div class="game-image">
+            <div class="game-placeholder memory-placeholder">
+              <div class="memory-cards">
+                <div class="card">🃏</div>
+                <div class="card">🃏</div>
+                <div class="card">🃏</div>
+                <div class="card">🃏</div>
+                <div class="player-indicator">👥</div>
+              </div>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3 class="game-title">Memory Card - 2 Players</h3>
+            <p class="game-description">
+              Take turns finding matching pairs. Compete with your friend!
+            </p>
+            <div class="game-stats">
+              <span class="stat">Players: 2</span>
+              <span class="stat">Turns: Alternating</span>
+            </div>
+            <button class="play-btn">Play Now</button>
+          </div>
+        </div>
+
+        <!-- Game 5: Tic Tac Toe -->
+        <div class="game-card" data-game="tictactoe-2player">
+          <div class="game-image">
+            <div class="game-placeholder tictactoe-placeholder">
+              <div class="tictactoe-board">
+                <div class="cell">X</div>
+                <div class="cell">O</div>
+                <div class="cell">X</div>
+                <div class="cell">O</div>
+                <div class="cell">X</div>
+                <div class="cell">O</div>
+                <div class="cell">X</div>
+                <div class="cell">O</div>
+                <div class="cell">X</div>
+                <div class="player-indicator">👥</div>
+              </div>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3 class="game-title">Tic Tac Toe - 2 Players</h3>
+            <p class="game-description">
+              Enhanced XO game with score tracking and turn management!
+            </p>
+            <div class="game-stats">
+              <span class="stat">Players: 2</span>
+              <span class="stat">Scoring: Yes</span>
+            </div>
+            <button class="play-btn">Play Now</button>
+          </div>
+        </div>
+
+        <!-- Game 6: Space Invaders (Original) -->
+        <div class="game-card" data-game="space-invaders">
+          <div class="game-image">
+            <div class="game-placeholder space-placeholder">
+              <div class="spaceship">🚀</div>
+              <div class="aliens">👾👾👾</div>
+              <div class="bullets">• • •</div>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3 class="game-title">Space Invaders</h3>
+            <p class="game-description">
+              Defend Earth from alien invasion. Classic arcade action!
+            </p>
+            <div class="game-stats">
+              <span class="stat">Action: Arcade</span>
+              <span class="stat">Levels: Infinite</span>
+            </div>
+            <button class="play-btn">Play Now</button>
+          </div>
+        </div>
+
+        <!-- Game 7: Snake (Classic) -->
+        <div class="game-card" data-game="snake-classic">
+          <div class="game-image">
+            <div class="game-placeholder snake-classic-placeholder">
+              <div class="snake-board">
+                <div class="snake-head">🟩</div>
+                <div class="snake-body">🟩</div>
+                <div class="apple">🍎</div>
+              </div>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3 class="game-title">Snake (Classic)</h3>
+            <p class="game-description">
+              Eat apples to grow longer. Use arrow keys. Don't bite yourself!
+            </p>
+            <div class="game-stats">
+              <span class="stat">Players: 1</span>
+              <span class="stat">Classic: Yes</span>
+            </div>
+            <button class="play-btn">Play Now</button>
+          </div>
+        </div>
+
+        <!-- Game 8: 2D Car Racing -->
+        <div class="game-card" data-game="car-racing">
+          <div class="game-image">
+            <div class="game-placeholder car-racing-placeholder">
+              <div class="road">
+                <div class="car">🏎️</div>
+                <div class="obstacle">🚧</div>
+                <div class="powerup">⭐</div>
+              </div>
+            </div>
+          </div>
+          <div class="game-info">
+            <h3 class="game-title">2D Car Racing</h3>
+            <p class="game-description">
+              Avoid obstacles and collect power-ups in this exciting racing
+              game!
+            </p>
+            <div class="game-stats">
+              <span class="stat">Action: Racing</span>
+              <span class="stat">Speed: High</span>
+            </div>
+            <button class="play-btn">Play Now</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

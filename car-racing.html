@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2D Car Racing</title>
+    <link rel="stylesheet" href="car-racing-styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="header">
+        <h1>🏎️ 2D Car Racing 🏁</h1>
+        <div class="game-info">
+          <div class="game-stats">
+            <div class="stat">
+              <span class="stat-label">Score:</span>
+              <span id="score">0</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Speed:</span>
+              <span id="speed">0 km/h</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Level:</span>
+              <span id="level">1</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Lives:</span>
+              <span id="lives">3</span>
+            </div>
+          </div>
+          <div class="game-controls">
+            <button id="pause-btn" class="control-btn">⏸️ Pause</button>
+            <button id="back-btn" class="back-btn">← Back to Dashboard</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-area">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="mobile-controls">
+          <div class="control-pad">
+            <button id="left-btn" class="direction-btn">←</button>
+            <button id="right-btn" class="direction-btn">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-overlay" id="game-overlay">
+        <div class="overlay-content">
+          <h2 id="overlay-title">2D Car Racing</h2>
+          <p id="overlay-message">
+            Avoid obstacles and collect power-ups. Use arrow keys or on-screen
+            controls to drive!
+          </p>
+          <div class="controls-info">
+            <p><strong>Controls:</strong></p>
+            <p>← → Arrow Keys: Move left/right</p>
+            <p>Space: Boost (if available)</p>
+          </div>
+          <button id="start-btn" class="game-btn">Start Game</button>
+        </div>
+      </div>
+
+      <div class="pause-overlay hidden" id="pause-overlay">
+        <div class="overlay-content">
+          <h2>Game Paused</h2>
+          <p>Press ESC or click Resume to continue</p>
+          <button id="resume-btn" class="game-btn">Resume</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="car-racing.js"></script>
+  </body>
+</html>

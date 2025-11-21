@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fast Typing Fighter</title>
+    <link rel="stylesheet" href="typing-game-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="game-container">
+      <header class="game-header">
+        <h1 class="game-title">Fast Typing Fighter</h1>
+        <div class="game-stats">
+          <div class="stat">
+            <span class="stat-label">Score:</span>
+            <span id="score" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Level:</span>
+            <span id="level" class="stat-value">1</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Words:</span>
+            <span id="wordsTyped" class="stat-value">0</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="game-area">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <div class="typing-input">
+          <input
+            type="text"
+            id="wordInput"
+            placeholder="Type the word to shoot!"
+            autocomplete="off"
+          />
+          <div class="current-word" id="currentWord">Ready to type!</div>
+        </div>
+
+        <div class="game-overlay" id="gameOverlay">
+          <div class="overlay-content">
+            <h2 id="overlayTitle">Fast Typing Fighter</h2>
+            <p id="overlayMessage">Type words to shoot down astronauts!</p>
+            <button id="startButton" class="game-button">Start Game</button>
+            <button
+              id="restartButton"
+              class="game-button"
+              style="display: none"
+            >
+              Play Again
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-controls">
+        <div class="control-group">
+          <h3>How to Play</h3>
+          <div class="control-item">
+            <span class="key">Type</span> Words to shoot astronauts
+          </div>
+          <div class="control-item">
+            <span class="key">Fast</span> Typing increases score
+          </div>
+          <div class="control-item">
+            <span class="key">Level</span> Difficulty increases over time
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="typing-game.js"></script>
+  </body>
+</html>

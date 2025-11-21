@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming Application</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="game-container">
+      <header class="game-header">
+        <h1 class="game-title">Space Invaders</h1>
+        <div class="game-stats">
+          <div class="stat">
+            <span class="stat-label">Score:</span>
+            <span id="score" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Lives:</span>
+            <span id="lives" class="stat-value">3</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Level:</span>
+            <span id="level" class="stat-value">1</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="game-area">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="game-overlay" id="gameOverlay">
+          <div class="overlay-content">
+            <h2 id="overlayTitle">Welcome to Space Invaders!</h2>
+            <p id="overlayMessage">Use arrow keys to move, spacebar to shoot</p>
+            <button id="startButton" class="game-button">Start Game</button>
+            <button
+              id="restartButton"
+              class="game-button"
+              style="display: none"
+            >
+              Play Again
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-controls">
+        <div class="control-group">
+          <h3>Controls</h3>
+          <div class="control-item">
+            <span class="key">←</span> <span class="key">→</span> Move
+          </div>
+          <div class="control-item"><span class="key">Space</span> Shoot</div>
+          <div class="control-item"><span class="key">P</span> Pause</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

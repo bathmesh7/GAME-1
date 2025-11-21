@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake (Classic)</title>
+    <link rel="stylesheet" href="snake-classic.css" />
+  </head>
+  <body>
+    <div class="snake-container">
+      <h1>Snake (Classic)</h1>
+      <canvas id="snakeCanvas" width="400" height="400"></canvas>
+      <div class="snake-info">
+        <span>Score: <span id="score">0</span></span>
+        <span
+          id="gameOverMsg"
+          style="display: none; color: red; font-weight: bold"
+          >Game Over! Press Space to Restart</span
+        >
+      </div>
+      <div class="snake-instructions">
+        <p>
+          Use <b>Arrow Keys</b> to move. Eat apples (🍎) to grow. Don't bite
+          yourself!
+        </p>
+      </div>
+      <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+    <script src="snake-classic.js"></script>
+  </body>
+</html>

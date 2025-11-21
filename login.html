@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming Platform - Login</title>
+    <link rel="stylesheet" href="login-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <div class="login-header">
+          <h1 class="platform-title">Gaming Platform</h1>
+          <p class="platform-subtitle">Enter the world of gaming</p>
+        </div>
+
+        <form id="loginForm" class="login-form">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="login-footer">
+          <p>
+            Don't have an account? <a href="#" id="registerLink">Register</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Registration Modal -->
+      <div id="registerModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Create Account</h2>
+          <form id="registerForm" class="register-form">
+            <div class="input-group">
+              <label for="regUsername">Username</label>
+              <input type="text" id="regUsername" name="regUsername" required />
+            </div>
+
+            <div class="input-group">
+              <label for="regEmail">Email</label>
+              <input type="email" id="regEmail" name="regEmail" required />
+            </div>
+
+            <div class="input-group">
+              <label for="regPassword">Password</label>
+              <input
+                type="password"
+                id="regPassword"
+                name="regPassword"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                required
+              />
+            </div>
+
+            <button type="submit" class="register-btn">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

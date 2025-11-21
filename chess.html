@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="chess-styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="header">
+        <h1>♔ Chess Game ♔</h1>
+        <div class="game-info">
+          <div class="player-turn">
+            <span id="current-player">White's Turn</span>
+          </div>
+          <div class="game-status">
+            <span id="game-status">Game in Progress</span>
+          </div>
+        </div>
+        <button id="back-btn" class="back-btn">← Back to Dashboard</button>
+      </div>
+
+      <div class="chess-layout">
+        <div class="captured-pieces" id="captured-pieces">
+          <h3>Captured Pieces</h3>
+          <div id="captured-list"></div>
+        </div>
+        <div>
+          <div class="chess-board" id="chess-board"></div>
+          <div class="possible-moves" id="possible-moves"></div>
+        </div>
+      </div>
+
+      <div class="how-to-play">
+        <h3>How to Play</h3>
+        <ul>
+          <li>
+            Select a piece by clicking it. Valid moves will highlight in
+            <span style="color: #00ff00">green</span>.
+          </li>
+          <li>Click a green square to move the piece there.</li>
+          <li>White moves first, then Black. Take turns.</li>
+          <li>Checkmate your opponent's king to win!</li>
+          <li>Use the buttons below to start a new game, undo, or reset.</li>
+        </ul>
+      </div>
+
+      <div class="game-controls">
+        <button id="new-game-btn" class="control-btn">New Game</button>
+        <button id="undo-btn" class="control-btn">Undo Move</button>
+        <button id="reset-btn" class="control-btn">Reset Game</button>
+      </div>
+
+      <div class="move-history">
+        <h3>Move History</h3>
+        <div id="moves-list" class="moves-list">
+          <!-- Move history will be displayed here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="chess.js"></script>
+  </body>
+</html>
